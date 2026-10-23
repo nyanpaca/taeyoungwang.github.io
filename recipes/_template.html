@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- EDIT: dish name -->
+  <title>Your dish name · Recipes · Taeyoung Wang</title>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="wordmark" href="../index.html">T.WANG</a>
+      <button class="menu-btn" aria-controls="site-nav" aria-expanded="false" aria-label="Menu"><span></span><span></span><span></span></button>
+      <nav id="site-nav" class="nav" aria-label="Main">
+        <a href="../index.html#projects">Projects</a>
+        <a href="../publications.html">Publications</a>
+        <a href="../about.html">About me</a>
+        <a href="../recipes.html" aria-current="page">Recipes</a>
+        <a class="btn-cv" href="../assets/Resume_Taeyoung_Wang.pdf" target="_blank" rel="noopener">CV <span class="dot" aria-hidden="true">↓</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="wrap">
+    <a class="back" href="../recipes.html">← All recipes</a>
+
+    <article class="sec tall">
+      <div class="sheet-head">
+        <div>
+          <!-- EDIT: a short label, the dish name, and the serving/time pill -->
+          <p class="label">// Recipe</p>
+          <h1 class="title">Your dish name</h1>
+        </div>
+        <span class="pill"><span>Serves 2</span><span>30 min</span></span>
+      </div>
+
+      <!-- PHOTO (optional): upload a photo to assets/recipes/ with this exact name and it appears here -->
+      <figure class="recipe-hero">
+        <img src="../assets/recipes/your-dish.jpg" alt="Photo of the finished dish">
+      </figure>
+
+      <!-- EDIT: one or two sentences about the dish -->
+      <p class="lead" style="margin-bottom:40px">A sentence or two about this dish — where it comes from, or why you make it.</p>
+
+      <div class="recipe-sheet">
+        <div>
+          <h2 class="kicker">Ingredients</h2>
+          <!-- EDIT: one <li> per ingredient -->
+          <ul class="ingredients">
+            <li>Ingredient one</li>
+            <li>Ingredient two</li>
+            <li>Ingredient three</li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="kicker">Steps</h2>
+          <!-- EDIT: one <li> per step; numbers are added automatically -->
+          <ol class="steps">
+            <li>First step.</li>
+            <li>Second step.</li>
+            <li>Third step.</li>
+          </ol>
+
+          <h2 class="kicker" style="margin-top:32px">Notes</h2>
+          <!-- EDIT: tips or substitutions (delete this section if you don't need it) -->
+          <p>A tip or substitution.</p>
+        </div>
+      </div>
+
+      <hr class="rule">
+      <div class="next"><a class="text-link" href="../recipes.html">More recipes <span class="dot" aria-hidden="true">→</span></a></div>
+    </article>
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="wrap">
+      <div class="inner">
+        <h2>LET’S TALK BATTERIES.</h2>
+        <div class="footer-row">
+          <a class="email" href="mailto:tw3074@columbia.edu">tw3074@columbia.edu</a>
+          <a class="btn-cv" href="../assets/Resume_Taeyoung_Wang.pdf" target="_blank" rel="noopener">DOWNLOAD CV <span class="dot" aria-hidden="true">↓</span></a>
+        </div>
+      </div>
+      <p class="copyright">© 2026 TAEYOUNG WANG</p>
+    </div>
+  </footer>
+
+  <script src="../script.js" defer></script>
+</body>
+</html>

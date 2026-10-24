@@ -4,19 +4,22 @@
    ========================================================== */
 
 :root {
-  --paper: #FBF8F1;
-  --card: #FFFDF8;
-  --ink: #2A2823;
-  --ink-soft: #4A463D;
-  --muted: #6F695D;
-  --hairline: #E7DFCD;
-  --dash: #E2DACA;
-  --ochre: #E9B93A;        /* bars and rules */
-  --ochre-text: #A97A12;   /* ochre used as text (darker so it stays readable) */
-  --butter: #FFE59A;
-  --butter-soft: #FFF1C2;
-  --butter-ink: #5A4500;
-  --slot: #F3EDE0;
+  /* Palette taken from the sunflower mark: brown centre + yellow petals */
+  --paper: #FCF8EE;
+  --card: #FFFDF7;
+  --ink: #4A3823;          /* deep sunflower-seed brown: headings, buttons, footer */
+  --ink-hover: #36281A;
+  --ink-soft: #5E4C36;     /* body text */
+  --muted: #7C6B4E;        /* labels and dates (sunflower hatch brown) */
+  --hairline: #EADFC6;
+  --dash: #E3D5B8;
+  --ochre: #E3C04A;        /* bars and rules (sunflower tick yellow) */
+  --ochre-text: #85640E;   /* yellow used as text, darkened so it stays readable */
+  --butter: #F3D76B;       /* sunflower petal yellow */
+  --butter-soft: #FAEDBE;
+  --butter-ink: #4A3823;
+  --slot: #F2E9D5;
+  --footer-muted: #D3C4A5;
   --green: #579A48;        /* home-page name only */
 
   --font: "M PLUS Rounded 1c", "Hiragino Maru Gothic ProN", system-ui, sans-serif;
@@ -70,6 +73,7 @@ p { margin: 0 0 1em; }
   line-height: 1.25; text-transform: uppercase; margin: .25em 0 0;
 }
 .lead { font-size: 17px; color: var(--ink-soft); max-width: 36em; }
+.lead strong, .news strong, .card p strong { color: var(--ink); font-weight: 700; }
 .lead a { color: var(--ink); text-decoration: none; border-bottom: 1.5px solid var(--ochre); }
 .lead a:hover { background: var(--butter-soft); }
 
@@ -102,7 +106,7 @@ p { margin: 0 0 1em; }
   border-radius: 999px; padding: 7px 8px 7px 16px; border: 0;
   text-decoration: none; font-size: 12px; font-weight: 700; letter-spacing: .14em;
 }
-.nav a.btn-cv:hover { border-bottom-color: transparent; background: #000; }
+.nav a.btn-cv:hover { border-bottom-color: transparent; background: var(--ink-hover); }
 
 .dot {
   display: inline-flex; align-items: center; justify-content: center;
@@ -146,7 +150,7 @@ p { margin: 0 0 1em; }
   font-family: var(--font-sign);
   font-weight: 400;
   color: var(--green);
-  font-size: clamp(52px, 9.5vw, 112px);
+  font-size: clamp(40px, 7.2vw, 84px);
   line-height: .78;
   letter-spacing: .005em;
   margin: 22px 0 30px;
@@ -254,7 +258,7 @@ p { margin: 0 0 1em; }
 .footer-row .email { font-size: 17px; text-decoration: none; border-bottom: 1.5px solid var(--ochre); }
 .site-footer .btn-cv { background: var(--paper); color: var(--ink); }
 .site-footer .btn-cv:hover { background: var(--butter-soft); }
-.copyright { margin: 44px 0 0; font-size: 12px; letter-spacing: .14em; color: #B9B2A3; padding-left: var(--gutter); }
+.copyright { margin: 44px 0 0; font-size: 12px; letter-spacing: .14em; color: var(--footer-muted); padding-left: var(--gutter); }
 
 /* ---------- Detail pages (projects + recipes) ---------- */
 
@@ -333,6 +337,8 @@ p { margin: 0 0 1em; }
 .recipe-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
 .recipe-card { padding: 0; overflow: hidden; }
 .thumb { aspect-ratio: 4 / 3; background: var(--slot); position: relative; overflow: hidden; }
+.thumb { display: flex; align-items: center; justify-content: center; }
+.thumb .sunflower { width: 64px; height: 64px; }
 .thumb img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity .3s; }
 .thumb img.loaded { opacity: 1; }
 .recipe-card .body { padding: 16px 18px 18px; display: flex; flex-direction: column; flex: 1; }
@@ -355,6 +361,11 @@ p { margin: 0 0 1em; }
 .steps { margin: 0; padding-left: 1.4em; }
 .steps li { margin-bottom: .8em; color: var(--ink-soft); padding-left: .3em; }
 .steps li::marker { color: var(--ochre-text); font-weight: 700; }
+.subs { margin: 0; padding-left: 1.2em; }
+.subs li { margin-bottom: .6em; color: var(--ink-soft); }
+.subs li::marker { color: var(--ochre-text); }
+.subs strong { color: var(--ink); }
+.steps .aside { display: block; font-size: .92em; color: var(--muted); margin-top: .2em; }
 
 /* ---------- Responsive ---------- */
 
